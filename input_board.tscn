@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="input_board" type="ColorRect"]
+margin_left = 148.325
+margin_top = 8.41623
+margin_right = 225.325
+margin_bottom = 607.416
+color = Color( 0.180392, 0.180392, 0.180392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
