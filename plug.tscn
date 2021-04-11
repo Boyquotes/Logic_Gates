@@ -4,9 +4,9 @@
 [ext_resource path="res://plug.gd" type="Script" id=2]
 
 [node name="plug" type="Button"]
-margin_right = 64.0
-margin_bottom = 56.0
-rect_scale = Vector2( 0.0452024, 0.0481709 )
+margin_right = 1548.0
+margin_bottom = 1158.0
+rect_scale = Vector2( 0.0362539, 0.0396702 )
 icon = ExtResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
@@ -14,3 +14,5 @@ __meta__ = {
 }
 [connection signal="button_down" from="." to="." method="_on_plug_button_down"]
 [connection signal="button_up" from="." to="." method="_on_plug_button_up"]
+[connection signal="mouse_entered" from="." to="." method="_on_plug_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_plug_mouse_exited"]

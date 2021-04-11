@@ -1,11 +1,28 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://start.tscn" type="PackedScene" id=1]
 
 [node name="input_board" type="ColorRect"]
-margin_left = 148.325
-margin_top = 8.41623
-margin_right = 225.325
-margin_bottom = 607.416
+margin_left = 2.0
+margin_top = -14.0
+margin_right = 79.0
+margin_bottom = 616.0
 color = Color( 0.180392, 0.180392, 0.180392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start0" parent="." instance=ExtResource( 1 )]
+position = Vector2( 11.4431, 331.718 )
+
+[node name="start1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 11.4431, 185.512 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 8.23785
+margin_top = 535.297
+margin_right = 63.2379
+margin_bottom = 584.297
 __meta__ = {
 "_edit_use_anchors_": false
 }

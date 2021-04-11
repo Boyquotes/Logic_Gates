@@ -4,7 +4,7 @@
 [ext_resource path="res://start_plug.gd" type="Script" id=2]
 [ext_resource path="res://start_plug_off.svg" type="Texture" id=3]
 
-[node name="Node2D" type="Node2D"]
+[node name="start" type="Node2D"]
 scale = Vector2( 0.82906, 0.853659 )
 
 [node name="on_off" type="Button" parent="."]
@@ -18,10 +18,10 @@ __meta__ = {
 }
 
 [node name="start_plug" parent="." instance=ExtResource( 1 )]
-margin_left = 88.0
-margin_top = 2.0
-margin_right = 1636.0
-margin_bottom = 1160.0
+margin_left = 86.7938
+margin_top = 6.68571
+margin_right = 1634.79
+margin_bottom = 1164.69
 icon = ExtResource( 3 )
 script = ExtResource( 2 )
 [connection signal="pressed" from="on_off" to="start_plug" method="_on_on_off_pressed"]
