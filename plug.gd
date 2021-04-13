@@ -2,18 +2,13 @@ extends Button
 
 var icon_on = preload("res://plug_on.svg")
 var icon_off = preload("res://plug_off.svg")
-var on = true
+var on = false
 var pos = null
 var selected = false
 
 var lead = null
 var hovered = false
-var p = false
-
-func _process(delta):
-	pass
-
-	  
+var p = false  
 		
 func _on_plug_button_down():
 	pos = get_viewport().get_mouse_position()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://plug_on.svg" type="Texture" id=1]
+[ext_resource path="res://plug_off.svg" type="Texture" id=1]
 [ext_resource path="res://plug.gd" type="Script" id=2]
 
 [node name="plug" type="Button"]
