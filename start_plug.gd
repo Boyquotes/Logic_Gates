@@ -7,16 +7,19 @@ var pos = null
 var selected = false
 var button_area = Rect2(self.rect_position, self.rect_size)
 
-var hovered = false
-var p = false
+
+
 
 func _input(event):
+	
+#connects this btn with the one wich was pulled towards it
 	if event is InputEventMouseButton:
 		if button_area.has_point(self.get_local_mouse_position()):
 			for i in self.get_parent().get_parent().get_parent().get_children():
 				if "plug" in i.get_name():
 					if i.selected:
 						i.link(self)
+
 
 func _on_plug_button_down():
 	selected = true
