@@ -6,15 +6,12 @@ var on = true
 var pos = null
 var selected = false
 
+var lead = null
 var hovered = false
 var p = false
 
 func _process(delta):
-	if Input.is_mouse_button_pressed(1) and not p:
-		p = true
-		print("pressed")
-	elif not Input.is_mouse_button_pressed(1):
-		p = false
+	pass
 
 	  
 		
@@ -28,12 +25,4 @@ func _on_plug_button_up():
 		on = false
 		icon = icon_off
 	selected = false
-
-
-func _on_plug_mouse_entered():
-	hovered = true
-
-
-func _on_plug_mouse_exited():
-	hovered = false
 
