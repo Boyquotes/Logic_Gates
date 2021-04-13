@@ -47,5 +47,7 @@ func _on_plug_button_up():
 	if pos == get_viewport().get_mouse_position():
 		on = false
 		icon = icon_off
+		lead = null
+
 	selected = false
 
