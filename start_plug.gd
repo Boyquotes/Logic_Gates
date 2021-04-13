@@ -16,18 +16,12 @@ func _input(event):
 			for i in self.get_parent().get_parent().get_parent().get_children():
 				if "plug" in i.get_name():
 					if i.selected:
-						print("we got a nice")
-
-			
+						i.link(self)
 
 func _on_plug_button_down():
-	pos = get_viewport().get_mouse_position()
 	selected = true
 
 func _on_plug_button_up():
-	if pos == get_viewport().get_mouse_position():
-		on = false
-		icon = icon_off
 	selected = false
 
 func _on_on_off_pressed():
