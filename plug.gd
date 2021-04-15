@@ -9,8 +9,10 @@ var on = false
 var selected = false
 var button_area = Rect2(self.rect_position, self.rect_size)
 var lead = null
+#if its input or output node
+var out = false
 
-# gleda ce je button pressed
+# stores if mouse button is pressed or not
 var p = false
 
 func _process(delta):
@@ -25,7 +27,7 @@ func _process(delta):
 				icon = icon_off
 
 func _input(event):
-	#poveze se z gumbom s katerim ga povezes
+	#links itself with a plug
 	if event is InputEventMouseButton:
 		if button_area.has_point(self.get_local_mouse_position()) and p:
 			var board = self.get_parent()
