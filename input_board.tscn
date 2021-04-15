@@ -1,28 +1,28 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://start.tscn" type="PackedScene" id=1]
+[ext_resource path="res://input_board.gd" type="Script" id=2]
 
 [node name="input_board" type="ColorRect"]
 margin_left = 2.0
-margin_top = -14.0
+margin_top = -15.1892
 margin_right = 79.0
-margin_bottom = 616.0
+margin_bottom = 530.811
 color = Color( 0.180392, 0.180392, 0.180392, 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="start0" parent="." instance=ExtResource( 1 )]
-position = Vector2( 11.4431, 331.718 )
+[node name="start" parent="." instance=ExtResource( 1 )]
+position = Vector2( 9.7282, 257.683 )
 
-[node name="start1" parent="." instance=ExtResource( 1 )]
-position = Vector2( 11.4431, 185.512 )
-
-[node name="Button" type="Button" parent="."]
-margin_left = 8.23785
-margin_top = 535.297
-margin_right = 63.2379
-margin_bottom = 584.297
+[node name="add" type="Button" parent="."]
+margin_left = 6.11892
+margin_top = 557.546
+margin_right = 61.119
+margin_bottom = 606.546
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="add" to="." method="_on_add_pressed"]
