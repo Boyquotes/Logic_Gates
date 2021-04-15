@@ -26,6 +26,12 @@ margin_top = 242.679
 margin_right = 1802.51
 margin_bottom = 1400.68
 
+[node name="plug2" parent="." instance=ExtResource( 3 )]
+margin_left = 531.595
+margin_top = 239.111
+margin_right = 2079.6
+margin_bottom = 1397.11
+
 [node name="output_board" parent="." instance=ExtResource( 1 )]
 margin_left = 933.0
 margin_top = 2.0
