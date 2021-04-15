@@ -9,11 +9,18 @@ var on = false
 var selected = false
 var button_area = Rect2(self.rect_position, self.rect_size)
 var lead = null
+
 #if its input or output node
-var out = false
+var out = true
 
 # stores if mouse button is pressed or not
 var p = false
+
+func _ready():
+	if "out" in self.get_name():
+		out = true
+	else:
+		out = false
 
 func _process(delta):
 	
@@ -43,9 +50,9 @@ func _input(event):
 			if c:
 				for i in board.get_children():
 					if "plug" in i.get_name():
-						print("i m", self.get_name())
-						print(i.get_name())
-		
+						if i.selected:
+							if not out:
+								lead = i
 		if p:
 			p = false
 		else:
