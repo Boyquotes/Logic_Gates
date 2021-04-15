@@ -53,6 +53,8 @@ func _input(event):
 						if i.selected:
 							if not out:
 								lead = i
+							else:
+								i.lead = self
 		if p:
 			p = false
 		else:
