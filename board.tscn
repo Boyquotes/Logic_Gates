@@ -15,10 +15,10 @@ __meta__ = {
 }
 
 [node name="input_board" parent="." instance=ExtResource( 2 )]
-margin_left = -1.48358
-margin_top = 0.529182
-margin_right = 75.5164
-margin_bottom = 546.529
+margin_left = 5.65167
+margin_top = 89.7184
+margin_right = 82.6517
+margin_bottom = 546.718
 
 [node name="plug" parent="." instance=ExtResource( 3 )]
 margin_left = 254.51

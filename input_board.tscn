@@ -5,24 +5,34 @@
 
 [node name="input_board" type="ColorRect"]
 margin_left = 2.0
-margin_top = -15.1892
+margin_top = 74.0
 margin_right = 79.0
-margin_bottom = 530.811
+margin_bottom = 531.0
 color = Color( 0.180392, 0.180392, 0.180392, 1 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="start" parent="." instance=ExtResource( 1 )]
-position = Vector2( 9.7282, 257.683 )
-
 [node name="add" type="Button" parent="."]
-margin_left = 6.11892
-margin_top = 557.546
-margin_right = 61.119
-margin_bottom = 606.546
+margin_left = 7.30813
+margin_top = -62.0313
+margin_right = 62.3082
+margin_bottom = -13.0313
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="remove" type="Button" parent="."]
+margin_left = 10.7029
+margin_top = 467.359
+margin_right = 66.7029
+margin_bottom = 517.359
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start" parent="." instance=ExtResource( 1 )]
+position = Vector2( 9.7282, 205.358 )
 [connection signal="pressed" from="add" to="." method="_on_add_pressed"]
+[connection signal="pressed" from="remove" to="." method="_on_remove_pressed"]
