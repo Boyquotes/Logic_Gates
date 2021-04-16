@@ -6,7 +6,7 @@
 [node name="plug" type="Button"]
 margin_right = 1548.0
 margin_bottom = 1158.0
-rect_scale = Vector2( 0.0362539, 0.0396702 )
+rect_scale = Vector2( 0.0311722, 0.0339943 )
 icon = ExtResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {

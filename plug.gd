@@ -19,6 +19,7 @@ var p = false
 func _ready():
 	if "out" in self.get_name():
 		out = true
+		print("ive got out in my name")
 	else:
 		out = false
 

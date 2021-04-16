@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://gate.gd" type="Script" id=1]
+
+[node name="gate" type="ColorRect"]
+margin_left = 227.139
+margin_top = 64.2172
+margin_right = 267.139
+margin_bottom = 104.217
+color = Color( 0.917647, 0.0862745, 0.0862745, 1 )
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1.0
+margin_top = 12.0
+margin_right = 37.0
+margin_bottom = 26.0
+text = "AAAA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
