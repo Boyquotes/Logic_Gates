@@ -38,9 +38,10 @@ func _input(event):
 	#links itself with a plug
 	if event is InputEventMouseButton:
 		if button_area.has_point(self.get_local_mouse_position()) and p:
-			var board = self.get_parent()
+			var board = self.get_parent().get_parent()
 			var c = true
 			for i in board.get_child(0).get_children():
+				print(i)
 				for ii in i.get_children():
 					print("name je ", ii.get_name())
 					if "plug" in ii.get_name():

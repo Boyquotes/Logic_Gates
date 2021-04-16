@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://output_board.tscn" type="PackedScene" id=1]
 [ext_resource path="res://input_board.tscn" type="PackedScene" id=2]
-[ext_resource path="res://plug.tscn" type="PackedScene" id=3]
 [ext_resource path="res://board.gd" type="Script" id=4]
 [ext_resource path="res://gate.tscn" type="PackedScene" id=5]
 
@@ -23,29 +22,11 @@ margin_top = 74.7856
 margin_right = 75.923
 margin_bottom = 531.785
 
-[node name="gate" parent="input_board" instance=ExtResource( 5 )]
-margin_left = 531.089
-margin_top = 363.013
-margin_right = 571.089
-margin_bottom = 403.013
-
 [node name="output_board" parent="." instance=ExtResource( 1 )]
 margin_left = 966.292
 margin_top = 73.615
 margin_right = 1031.29
 margin_bottom = 528.615
-
-[node name="plug" parent="." instance=ExtResource( 3 )]
-margin_left = 674.3
-margin_top = 254.571
-margin_right = 2222.3
-margin_bottom = 1412.57
-
-[node name="out_plug" parent="." instance=ExtResource( 3 )]
-margin_left = 379.376
-margin_top = 253.382
-margin_right = 1927.38
-margin_bottom = 1411.38
 
 [node name="remove_output" type="Button" parent="."]
 margin_left = 971.0
@@ -55,6 +36,12 @@ margin_bottom = 590.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="gate" parent="." instance=ExtResource( 5 )]
+margin_left = 337.686
+margin_top = 262.238
+margin_right = 377.686
+margin_bottom = 302.238
 
 [node name="add_output" type="Button" parent="."]
 margin_left = 972.281
