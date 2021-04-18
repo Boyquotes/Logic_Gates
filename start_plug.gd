@@ -16,9 +16,12 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if button_area.has_point(self.get_local_mouse_position()):
 			for i in self.get_parent().get_parent().get_parent().get_children():
-				if "plug" in i.get_name():
-					if i.selected:
-						i.link(self)
+				var nm = i.get_name()
+				if not "input_board" in nm and not "output_board" in nm and not "remove_out" in nm and not "add_output" in nm:
+					for ii in i.get_children():
+						if "input" in ii.get_name():
+							if ii.selected:
+								ii.link(self)
 
 
 func _on_plug_button_down():

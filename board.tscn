@@ -6,9 +6,9 @@
 [ext_resource path="res://gate.tscn" type="PackedScene" id=5]
 
 [node name="board" type="ColorRect"]
-margin_left = -3.81079
+margin_left = -2.86688
 margin_top = -8.0
-margin_right = 1051.19
+margin_right = 1052.13
 margin_bottom = 599.0
 color = Color( 0.458824, 0.458824, 0.458824, 1 )
 __meta__ = {
