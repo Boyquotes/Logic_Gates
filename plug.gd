@@ -53,15 +53,19 @@ func _input(event):
 					if i.selected == true:
 						i.lead = self
 					
-			#TODO this shit is currently useless
 			if c:
 				for i in board.get_children():
-					if "plug" in i.get_name():
-						if i.selected:
-							if not out:
-								lead = i
-							else:
-								i.lead = self
+					var nm = i.get_name()
+					if not "input_board" in nm and not "output_board" in nm and not "remove_out" in nm and not "add_output" in nm:
+						for ii in i.get_children():
+							if "Label" in ii.get_name():
+								continue
+							if out != ii.out and ii.selected:
+								if out:
+									ii.lead = self
+								else:
+									lead = ii
+							
 		if p:
 			p = false
 		else:

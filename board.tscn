@@ -6,9 +6,9 @@
 [ext_resource path="res://gate.tscn" type="PackedScene" id=5]
 
 [node name="board" type="ColorRect"]
-margin_left = -2.86688
+margin_left = -1.92297
 margin_top = -8.0
-margin_right = 1052.13
+margin_right = 1053.08
 margin_bottom = 599.0
 color = Color( 0.458824, 0.458824, 0.458824, 1 )
 __meta__ = {
@@ -38,10 +38,22 @@ __meta__ = {
 }
 
 [node name="gate" parent="." instance=ExtResource( 5 )]
-margin_left = 337.686
-margin_top = 262.238
-margin_right = 377.686
-margin_bottom = 302.238
+margin_left = 323.528
+margin_top = 337.748
+margin_right = 363.528
+margin_bottom = 377.748
+
+[node name="gate2" parent="." instance=ExtResource( 5 )]
+margin_left = 680.313
+margin_top = 257.519
+margin_right = 720.313
+margin_bottom = 297.519
+
+[node name="gate3" parent="." instance=ExtResource( 5 )]
+margin_left = 326.359
+margin_top = 147.085
+margin_right = 366.359
+margin_bottom = 187.085
 
 [node name="add_output" type="Button" parent="."]
 margin_left = 972.281
