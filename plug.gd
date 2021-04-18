@@ -49,6 +49,12 @@ func _input(event):
 							lead = ii
 							c = false
 			if c:
+				for i in board.get_child(1).get_children():
+					if i.selected == true:
+						i.lead = self
+					
+			#TODO this shit is currently useless
+			if c:
 				for i in board.get_children():
 					if "plug" in i.get_name():
 						if i.selected:
