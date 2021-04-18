@@ -24,15 +24,14 @@ func _ready():
 		out = false
 
 func _process(delta):
-	
 	#verafaying synchronazation with a link node and correcting it
 	if lead != null:
 		if on != lead.on:
 			on = lead.on
-			if on:
-				icon = icon_on
-			else:
-				icon = icon_off
+	if on:
+		icon = icon_on
+	else:
+		icon = icon_off
 
 func _input(event):
 	#links itself with a plug

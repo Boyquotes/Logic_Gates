@@ -8,9 +8,18 @@ var plug = preload("res://plug.tscn")
 #Has to be atleast one
 var num_inputs = 2
 var num_outputs = 1
-
+var int_input
 var spacing = null
-var output_table = [0, 0, 0, 1]
+var output_table = ["0", "0", "0", "1"]
+
+func bin2dec(bin):
+	var count = pow(2, len(bin) - 1)
+	var dec = 0
+	for i in bin:
+		dec += int(i) * count
+		count = count / 2
+	return dec
+	
 
 func _ready():
 	if num_inputs > num_outputs:
@@ -53,5 +62,28 @@ func _ready():
 		elif "output" in i.get_name():
 			i.set_position(Vector2(self.rect_size.x - 20, x_out))
 			x_out += out_spacing
+
+func _process(delta):
+	var inputs = ""
+	for i in self.get_children():
+		if "Label" in i.get_name():
+			continue
+		if "out" in i.get_name():
+			break
+		if i.on:
+			inputs = "1" + inputs
+		else:
+			inputs = "0" + inputs
+	int_input = bin2dec(inputs)
+	
+	for i in range(num_outputs):
+		var j = self.get_child(num_inputs + i + 1)
+		if output_table[int_input][i] == "1":
+			j.on = true
+		else:
+			j.on = false
+			
+	
+		
 		
 

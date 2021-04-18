@@ -4,7 +4,7 @@ var num_outputs = 5
 var output_template = load("res://plug.tscn")
 
 func reposition_buttons():
-	var spacing = self.get_child(1).rect_size.y / (num_outputs - 4)
+	var spacing = self.rect_size.y / (num_outputs - 4)
 	var y_input = spacing
 	
 	for i in self.get_children():
