@@ -19,3 +19,5 @@ text = "Temp"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="mouse_entered" from="." to="." method="_on_gate_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_gate_mouse_exited"]

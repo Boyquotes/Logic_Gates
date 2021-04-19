@@ -12,6 +12,26 @@ var int_input
 var spacing = null
 var output_table = ["0", "0", "0", "1"]
 
+var hoverd = false
+var p = false
+var following = false
+var drag_adjustment
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if not p and hoverd:
+			print("following")
+			following = true
+			drag_adjustment =  get_global_mouse_position() - self.rect_global_position
+			print(drag_adjustment)
+
+		if p:
+			p = false
+			following = false
+		else:
+			p = true
+
+			
 func bin2dec(bin):
 	var count = pow(2, len(bin) - 1)
 	var dec = 0
@@ -64,6 +84,9 @@ func _ready():
 			x_out += out_spacing
 
 func _process(delta):
+	if following:
+		self.set_global_position(get_global_mouse_position() - drag_adjustment)
+	
 	var inputs = ""
 	for i in self.get_children():
 		if "Label" in i.get_name():
@@ -83,7 +106,9 @@ func _process(delta):
 		else:
 			j.on = false
 			
-	
-		
-		
 
+func _on_gate_mouse_entered():
+	hoverd = true
+
+func _on_gate_mouse_exited():
+	hoverd = false
