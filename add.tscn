@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://add.gd" type="Script" id=1]
+
+[node name="add" type="Button"]
+margin_right = 142.0
+margin_bottom = 33.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_top = 4.75682
+margin_right = 135.0
+margin_bottom = 32.7568
+text = "And"
+[connection signal="pressed" from="." to="." method="_on_add_pressed"]

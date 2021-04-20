@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://gate_pop.gd" type="Script" id=1]
+
+[node name="gate_popup" type="PopupMenu"]
+visible = true
+margin_left = 329.833
+margin_top = 50.7575
+margin_right = 502.833
+margin_bottom = 165.757
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="mouse_entered" from="." to="." method="_on_gate_popup_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_gate_popup_mouse_exited"]

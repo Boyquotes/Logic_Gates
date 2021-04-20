@@ -42,6 +42,7 @@ func bin2dec(bin):
 	
 
 func _ready():
+
 	if num_inputs > num_outputs:
 		self.rect_size = Vector2(len(txt) * 10 + 60, 39 * num_inputs)
 

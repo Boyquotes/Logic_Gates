@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://output_board.tscn" type="PackedScene" id=1]
 [ext_resource path="res://input_board.tscn" type="PackedScene" id=2]
+[ext_resource path="res://save.gd" type="Script" id=3]
 [ext_resource path="res://board.gd" type="Script" id=4]
 [ext_resource path="res://gate.tscn" type="PackedScene" id=5]
+[ext_resource path="res://gate_popup.tscn" type="PackedScene" id=6]
 
 [node name="board" type="ColorRect"]
 margin_left = -1.92297
@@ -11,6 +13,7 @@ margin_top = -8.0
 margin_right = 1053.08
 margin_bottom = 599.0
 color = Color( 0.458824, 0.458824, 0.458824, 1 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -37,6 +40,49 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="add_output" type="Button" parent="."]
+margin_left = 972.281
+margin_top = 15.8316
+margin_right = 1022.28
+margin_bottom = 57.8316
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="open_popup" type="Button" parent="."]
+margin_left = 881.056
+margin_top = 17.7194
+margin_right = 929.056
+margin_bottom = 57.7194
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="remove_gate" type="Button" parent="."]
+margin_left = 901.402
+margin_top = 544.617
+margin_right = 952.402
+margin_bottom = 589.617
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gate_popup" parent="." instance=ExtResource( 6 )]
+visible = false
+margin_left = 695.228
+margin_top = 15.6417
+margin_right = 868.228
+margin_bottom = 130.641
+
+[node name="Save" type="Button" parent="."]
+margin_left = 104.77
+margin_top = 13.2143
+margin_right = 160.77
+margin_bottom = 63.2143
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="gate" parent="." instance=ExtResource( 5 )]
 margin_left = 323.528
 margin_top = 337.748
@@ -54,14 +100,7 @@ margin_left = 326.359
 margin_top = 147.085
 margin_right = 366.359
 margin_bottom = 187.085
-
-[node name="add_output" type="Button" parent="."]
-margin_left = 972.281
-margin_top = 15.8316
-margin_right = 1022.28
-margin_bottom = 57.8316
-__meta__ = {
-"_edit_use_anchors_": false
-}
 [connection signal="pressed" from="remove_output" to="output_board" method="_on_remove_output_pressed"]
 [connection signal="pressed" from="add_output" to="output_board" method="_on_add_output_pressed"]
+[connection signal="pressed" from="open_popup" to="gate_popup" method="_on_add_gate_pressed"]
+[connection signal="pressed" from="Save" to="." method="_on_Save_pressed"]

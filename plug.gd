@@ -56,10 +56,11 @@ func _input(event):
 			if c:
 				for i in board.get_children():
 					var nm = i.get_name()
-					if not "input_board" in nm and not "output_board" in nm and not "remove_out" in nm and not "add_output" in nm:
+					if not "input_board" in nm and not "output_board" in nm and not "remove_out" in nm and not "add_output" in nm and not "open_popup" in nm and not "remove_gate" in nm and not "gate_popup" in nm and not "Save" in nm:
 						for ii in i.get_children():
 							if "Label" in ii.get_name():
 								continue
+							print("out ", ii.get_name())
 							if out != ii.out and ii.selected:
 								if out:
 									ii.lead = self
