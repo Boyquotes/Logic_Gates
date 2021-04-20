@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://output_board.tscn" type="PackedScene" id=1]
 [ext_resource path="res://input_board.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://board.gd" type="Script" id=4]
 [ext_resource path="res://gate.tscn" type="PackedScene" id=5]
 [ext_resource path="res://gate_popup.tscn" type="PackedScene" id=6]
+[ext_resource path="res://remove_gate.gd" type="Script" id=7]
 
 [node name="board" type="ColorRect"]
 margin_left = -1.92297
@@ -63,6 +64,7 @@ margin_left = 901.402
 margin_top = 544.617
 margin_right = 952.402
 margin_bottom = 589.617
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -83,24 +85,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="gate" parent="." instance=ExtResource( 5 )]
-margin_left = 323.528
-margin_top = 337.748
-margin_right = 363.528
-margin_bottom = 377.748
-
-[node name="gate2" parent="." instance=ExtResource( 5 )]
-margin_left = 680.313
-margin_top = 257.519
-margin_right = 720.313
-margin_bottom = 297.519
-
 [node name="gate3" parent="." instance=ExtResource( 5 )]
-margin_left = 326.359
-margin_top = 147.085
-margin_right = 366.359
-margin_bottom = 187.085
+margin_left = 632.175
+margin_top = 310.376
+margin_right = 672.175
+margin_bottom = 350.376
 [connection signal="pressed" from="remove_output" to="output_board" method="_on_remove_output_pressed"]
 [connection signal="pressed" from="add_output" to="output_board" method="_on_add_output_pressed"]
 [connection signal="pressed" from="open_popup" to="gate_popup" method="_on_add_gate_pressed"]
+[connection signal="mouse_entered" from="remove_gate" to="remove_gate" method="_on_remove_gate_mouse_entered"]
+[connection signal="mouse_exited" from="remove_gate" to="remove_gate" method="_on_remove_gate_mouse_exited"]
 [connection signal="pressed" from="Save" to="." method="_on_Save_pressed"]
