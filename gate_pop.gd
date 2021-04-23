@@ -1,8 +1,6 @@
 extends PopupMenu
 
-
-func _on_add_gate_pressed():
-	popup()
+func _ready():
 	var btn_tmp = load("res://add.tscn")
 	var file = File.new()
 	file.open("user://gates", File.READ)
@@ -12,3 +10,7 @@ func _on_add_gate_pressed():
 		var new_btn = btn_tmp.instance()
 		new_btn.set_name(i["name"])
 		self.add_child(new_btn)
+
+func _on_add_gate_pressed():
+	popup()
+	
