@@ -10,9 +10,11 @@ func _on_add_pressed():
 	var data = []
 	data = parse_json(file.get_line())
 	var table
+	var color
 	for i in data:
 		if my_nm == i["name"]:
-			table = i["table"] 
+			table = i["table"]
+			color = i["color"] 
 			break
 	var gate = load("res://gate.tscn").instance()
 	var inputs = 0
@@ -24,5 +26,7 @@ func _on_add_pressed():
 	gate.output_table = table
 	gate.num_inputs = inputs
 	gate.num_outputs = len(table[0])
+	gate.txt = my_nm
+	gate.rect_color = color
 	p.add_child(gate)
 

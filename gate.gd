@@ -1,11 +1,10 @@
 extends ColorRect
 
-var rect_color = "blue"
-var txt = "and"
-var txt_color = "white"
 var plug = preload("res://plug.tscn")
 
-#Has to be atleast one
+
+var rect_color = ""
+var txt = "idk"
 var num_inputs = 2
 var num_outputs = 1
 var int_input
@@ -42,7 +41,21 @@ func bin2dec(bin):
 	
 
 func _ready():
-
+	if rect_color == "red":
+		self.color = "ea1616"
+	elif rect_color == "blue":
+		self.color = "162dea"
+	elif rect_color == "purple":
+		self.color = "d416ea"
+	elif rect_color == "orange":
+		self.color = "ea6116"
+	elif rect_color == "yellow":
+		self.color = "ab9f17"
+	elif rect_color == "green":
+		self.color = "43d225"
+	else:
+		color = "ffffff"
+		
 	if num_inputs > num_outputs:
 		self.rect_size = Vector2(len(txt) * 10 + 60, 39 * num_inputs)
 
