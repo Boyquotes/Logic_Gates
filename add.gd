@@ -1,6 +1,7 @@
 extends Button
 
-
+func _ready():
+	self.get_child(0).text = self.get_name()
 
 func _on_add_pressed():
 	var my_nm = self.get_name()
