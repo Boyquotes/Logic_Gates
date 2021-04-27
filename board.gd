@@ -20,7 +20,7 @@ func _on_add_output_pressed():
 	self.add_child(new_output)
 	reposition_buttons()
 	
-	print(new_output.get_name())
+	print(new_output.get_parent().get_name())
 
 
 func _on_remove_output_pressed():

@@ -36,6 +36,4 @@ func _on_on_off_pressed():
 		icon = icon_on
 	else:
 		icon = icon_off
-	print("start button je ", on)
-
 

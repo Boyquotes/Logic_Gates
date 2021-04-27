@@ -53,8 +53,8 @@ func _ready():
 		self.color = "ab9f17"
 	elif rect_color == "green":
 		self.color = "43d225"
-	else:
-		color = "ffffff"
+	elif rect_color == "black":
+		self.color = "000000"
 		
 	if num_inputs > num_outputs:
 		self.rect_size = Vector2(len(txt) * 10 + 60, 39 * num_inputs)

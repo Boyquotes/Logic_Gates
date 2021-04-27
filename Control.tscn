@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://plug.tscn" type="PackedScene" id=1]
 [ext_resource path="res://start.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://gate.tscn" type="PackedScene" id=7]
 [ext_resource path="res://gate_popup.tscn" type="PackedScene" id=8]
 [ext_resource path="res://add.tscn" type="PackedScene" id=9]
+[ext_resource path="res://select_nm.tscn" type="PackedScene" id=10]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -43,6 +44,9 @@ icon = ExtResource( 4 )
 [node name="gate" parent="." instance=ExtResource( 7 )]
 
 [node name="gate_popup" parent="." instance=ExtResource( 8 )]
+visible = false
 
 [node name="add" parent="." instance=ExtResource( 9 )]
+
+[node name="PopupMenu" parent="." instance=ExtResource( 10 )]
 [connection signal="pressed" from="add" to="board" method="_on_add_pressed"]
