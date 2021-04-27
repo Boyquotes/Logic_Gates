@@ -78,7 +78,8 @@ func _process(delta):
 				color = clr,
 				table = tb
 			}
-			print(a)
+			data.append(a)
+			file.store_line(to_json(data))
 			tb = []
 			
 		
@@ -87,7 +88,6 @@ func _on_Button_pressed():
 	pressed = true
 	
 	
-	# data.append(a)
-	# file.store_line(to_json(data))
+
 
 
